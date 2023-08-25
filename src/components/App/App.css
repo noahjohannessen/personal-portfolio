@@ -1,0 +1,25 @@
+.test {
+    margin: 0;
+    width: calc(100dvw - 30px);
+    height: calc(100dvh - 30px);
+    background-color:black;
+    overflow: hidden;
+    --angle: 0deg;
+    border: 15px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(var(--angle), #ff0000, #fbff00);
+    animation: 4s rotate linear infinite;
+    cursor:none;
+}
+
+@keyframes rotate {
+    to {
+        --angle: 360deg;
+    }
+}
+
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
